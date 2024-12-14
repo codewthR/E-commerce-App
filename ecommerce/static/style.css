@@ -1,0 +1,42 @@
+/* General styles for the navigation bar */
+.navigation {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 10px 20px; /* Padding around the navigation bar */
+    border-bottom: 1px solid #ddd; /* Optional bottom border */
+}
+
+/* Flexbox layout for the navigation */
+.navigation nav {
+    text-decoration: dotted;
+    display: flex; /* Enable flexbox */
+    justify-content: space-evenly; /* Space between left and right sections */
+    align-items: center; /* Align items vertically in the center */
+}
+.navigation nav a{
+    text-decoration: dotted;
+    text-decoration-color: color-mix(in hsl shorter hue, color percentage, color percentage);
+    text-shadow: #0056b3 ;
+}
+/* Left side links (Home, Products, Cart, About) */
+.nav-left a {
+    margin-right: 15px; /* Space between links */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark text color */
+    font-weight: bold; /* Bold text */
+}
+
+.nav-left a:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+/* Right side links (SignIn, SignUp) */
+.nav-right a {
+    margin-left: 15px; /* Space between links */
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Highlight color */
+    font-weight: bold; /* Bold text */
+}
+
+.nav-right a:hover {
+    color: #0056b3; /* Darker highlight color on hover */
+}
