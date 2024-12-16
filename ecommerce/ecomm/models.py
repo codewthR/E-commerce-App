@@ -6,7 +6,7 @@ class product(models.Model):
     name = models.CharField(max_length=50)
     price = models.IntegerField()
     description =models.TextField(max_length=100)
-    image =models.ImageField( upload_to=None, height_field=None, width_field=None, max_length=None)
+    image =models.ImageField( upload_to="imags", height_field=None, width_field=None, max_length=None)
     stock = models.PositiveIntegerField( default = 0)
 
 
