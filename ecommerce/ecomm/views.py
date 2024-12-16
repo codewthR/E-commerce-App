@@ -7,4 +7,5 @@ def home (request):
 
 def Products(request):
     product = Products.object.all()
-    
+
+def
