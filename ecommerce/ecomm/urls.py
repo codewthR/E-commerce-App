@@ -4,5 +4,5 @@ from ecomm import views
 
 
 urlpatterns = [
-    path('', views.home ,name='home')
+    path('', views.product ,name='home')
 ]

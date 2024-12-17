@@ -43,13 +43,15 @@
     </section>
     <p class="gradient-text">Hurry Up !</p>
 
-    <section>
-        <div>
-            {% comment %} {% for j in Products %}
-            <p>Description : j.description </p> {% endcomment %}
-
-        </div>
-    </section>
+    <div>
+       
+        <h1>Product list </h1>
+        <ul>
+            {% for prod in Products %}
+            <li>{{ prod.name }} - {{prod.price }}</li>
+        </ul>
+        
+    </div>
 
 </body>
 </html>
