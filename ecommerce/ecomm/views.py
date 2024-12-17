@@ -13,4 +13,4 @@ def products(request):
     render (request, 'index.html')
 
 
-class Products:
+class Produ
