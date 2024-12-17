@@ -14,4 +14,3 @@ def products(request):
 
 
 class Products:
-    name
