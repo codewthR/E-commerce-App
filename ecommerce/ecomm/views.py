@@ -11,3 +11,7 @@ def Products(request):
 
 def products(request):
     render (request, 'index.html')
+
+
+class Products:
+    name
