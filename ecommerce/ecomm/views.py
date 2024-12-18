@@ -1,15 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import product
+from .models import *
 
-# Create your views here.
-# def home (request):
-#     return render(request, 'index.html')
+def add_product(request):
+    if request.method == "POST":
+        data = request.POST
+        name = data.get('name')
+        price =data.get('price')
+        image = request.FILES.get('image')
 
 
-def product(request):
-    print(product)
-    products = product.objects.all()
-    return render(request , 'index.html', { 'product': product})
- 
+        product.objects.create(
+            name= name,
+            price=price,
+            image=image,
+        )
 
+
+
+    return render(request, 'index.html')
