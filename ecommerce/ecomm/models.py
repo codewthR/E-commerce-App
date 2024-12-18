@@ -8,6 +8,7 @@ class product(models.Model):
     description =models.TextField(max_length=100)
     image =models.ImageField( upload_to="imags", height_field=None, width_field=None, max_length=None)
     stock = models.PositiveIntegerField( default = 0)
+    date = models.DateTimeField(_(""), auto_now=False, auto_now_add=True)
 
 
     def __str__(self):
