@@ -6,9 +6,9 @@ class product(models.Model):
     name = models.CharField(max_length=50)
     price = models.IntegerField()
     description =models.TextField(max_length=100)
-    image =models.ImageField( upload_to="imags", height_field=None, width_field=None, max_length=None)
+    image =models.ImageField( upload_to="images")
     stock = models.PositiveIntegerField( default = 0)
-    date = models.DateTimeField(_(""), auto_now=False, auto_now_add=True)
+
 
 
     def __str__(self):
