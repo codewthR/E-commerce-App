@@ -15,7 +15,10 @@ def add_product(request):
             price=price,
             image=image,
         )
-
-
-
     return render(request, 'index.html')
+
+
+def display(request):
+    if request.method == "GET":
+        products = product.objects.all()
+        return render(request, "display.html" , {'products' : products})
