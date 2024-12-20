@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
     <style>
+        body{
+            color: white;
+            background: black;
+        }
         table {
             border-collapse: collapse;
             width: 100%;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            border: 5px solid grey;
+            padding: 4px;
         }
         th {
-            background-color: #f4f4f4;
-            text-align: left;
+            background-color:rgb(197, 27, 27);
+            text-align: center;
         }
     </style> 
 </head>
@@ -36,11 +40,14 @@
                 <tr>
                     <td>{{ i.name }}</td>
                     <td>{{ i.price }}</td>
-                    <td><img src="/media/{{ i.image}}" style="width: 150px; height: auto;"></td> 
+                    <td><img src="/media/{{ i.image}}" style="width: 100px; height: 100px;"></td> 
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+    <button onclick="history.back()" class="btn btn-secondary">Go Back</button>
+
+
 </body>
 </html>

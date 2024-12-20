@@ -22,3 +22,16 @@ def display(request):
     if request.method == "GET":
         products = product.objects.all()
         return render(request, "display.html" , {'products' : products})
+    
+def up(request):
+    if request.method == "POST":
+        data = request.POST
+        nam = data.get('name')
+        pric =data.get('price')
+        product.objects.update(
+            name= nam,
+            price=pric
+        )
+    return render(request, 'updates.html')
+    # else :
+    #     return render(request, 'display.html')
