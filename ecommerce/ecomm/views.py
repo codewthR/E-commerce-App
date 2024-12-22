@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
+from .models import product
+from django.http import JsonResponse
 
 def add_product(request):
     if request.method == "POST":
@@ -23,15 +25,13 @@ def display(request):
         products = product.objects.all()
         return render(request, "display.html" , {'products' : products})
     
+    
+
 def up(request):
-    if request.method == "POST":
-        data = request.POST
-        nam = data.get('name')
-        pric =data.get('price')
-        product.objects.update(
-            name= nam,
-            price=pric
-        )
-    return render(request, 'updates.html')
-    # else :
-    #     return render(request, 'display.html')
+    if request.method == "PUT":
+        product = product.objects.get
+        data = request.PUT
+        product.name = data['Name']
+        product.price = data['Price']
+        product.save()
+        return JsonResponse({{'mesage' : 'product updated successfuly!'}})
