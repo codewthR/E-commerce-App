@@ -10,18 +10,6 @@
         <h2>UPDATE STOCK</h2>
         <a href="{% url 'up' product.pk %}">Update {{ product.name }}</a>
         <form action="/" method="PUT" enctype="multipart/form-data">
-            {% csrf_token %} <!-- Missing CSRF token -->
-            <label for="Name" class="form-label">Name:</label><br>
-            <input type="text" name="nam" required class="form-label"><br><br>
-        
-            <label for="Price" class="form-label">Price:</label><br>
-            <input type="number" name="pric" step="100" required class="form-label"><br><br>
-        
-            <label for="file" class="form-label">Upload File:</label><br>
-            <input type="file" name="image" class="form-label"><br><br>
-        
-            <button type="submit" class="btn btn-success">ADD STOCK</button>
-        </form>
     </div>
 </body>
-</html>
+</html>  

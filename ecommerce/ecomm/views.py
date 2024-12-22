@@ -35,3 +35,5 @@ def up(request):
         product.price = data['Price']
         product.save()
         return JsonResponse({{'mesage' : 'product updated successfuly!'}})
+    
+
