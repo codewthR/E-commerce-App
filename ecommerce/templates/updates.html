@@ -8,12 +8,13 @@
 <body>
     <div class = "container">
         <h2>UPDATE STOCK</h2>
-        <form action="/" method="POST" enctype="multipart/form-data">
+        <a href="{% url 'up' product.pk %}">Update {{ product.name }}</a>
+        <form action="/" method="PUT" enctype="multipart/form-data">
             {% csrf_token %} <!-- Missing CSRF token -->
-            <label for="nam" class="form-label">Name:</label><br>
+            <label for="Name" class="form-label">Name:</label><br>
             <input type="text" name="nam" required class="form-label"><br><br>
         
-            <label for="pric" class="form-label">Price:</label><br>
+            <label for="Price" class="form-label">Price:</label><br>
             <input type="number" name="pric" step="100" required class="form-label"><br><br>
         
             <label for="file" class="form-label">Upload File:</label><br>
