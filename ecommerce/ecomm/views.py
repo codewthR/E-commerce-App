@@ -10,14 +10,13 @@ def add_product(request):
         name = data.get('name')
         price =data.get('price')
         image = request.FILES.get('image')
-
-
         product.objects.create(
             name= name,
             price=price,
             image=image,
         )
     return render(request, 'index.html')
+
 
 
 def display(request):
@@ -27,13 +26,9 @@ def display(request):
     
     
 
-def up(request):
-    if request.method == "PUT":
-        product = product.objects.get
-        data = request.PUT
-        product.name = data['Name']
-        product.price = data['Price']
-        product.save()
-        return JsonResponse({{'mesage' : 'product updated successfuly!'}})
-    
+
+def updates(request, id):
+    if request.method == 'PUT':
+        return render(request, "updates.html")
+
 

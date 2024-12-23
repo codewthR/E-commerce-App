@@ -33,6 +33,7 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Image</th>
+                    <th>Changes</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,6 +42,12 @@
                     <td>{{ i.name }}</td>
                     <td>{{ i.price }}</td>
                     <td><img src="/media/{{ i.image}}" style="width: 100px; height: 100px;"></td> 
+                </td> 
+                <td>
+                    <form method="GET" action="updates.html" style="margin: 0;">
+                        <button type="submit" id="navigate-btn">Update</button>
+                    </form>
+                </td>
                 </tr>
                 {% endfor %}
             </tbody>
