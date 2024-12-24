@@ -47,16 +47,18 @@
         <form action="/" method="POST" enctype="multipart/form-data">
             {% csrf_token %} <!-- Missing CSRF token -->
             <label for="name" class="form-label">Name:</label><br>
-            <input type="text" name="name" required class="form-label"><br><br>
+            <input type="text" name="name" required class="form-label" placeholder="Enter Name  "><br><br>
         
             <label for="price" class="form-label">Price:</label><br>
-            <input type="number" name="price" step="100" required class="form-label"><br><br>
+            <input type="number" name="price" step="all" required class="form-label" placeholder="Enter the amount"><br><br>
         
             <label for="file" class="form-label">Upload File:</label><br>
-            <input type="file" name="image" class="form-label"><br><br>
+            <input type="file" name="image" class="form-label" ><br><br>
         
             <button type="submit" class="btn btn-success">ADD STOCK</button>
         </form>
     </div>
+
+</form>
 </body>
 </html>
