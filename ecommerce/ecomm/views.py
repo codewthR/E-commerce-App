@@ -32,3 +32,7 @@ def updates(request, id):
         return render(request, "updates.html")
 
 
+
+def 
+
+
