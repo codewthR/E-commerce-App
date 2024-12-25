@@ -33,6 +33,7 @@ def updates(request, id):
 
 
 
-def dele
+def delete:
+    
 
 
