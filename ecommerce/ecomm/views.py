@@ -33,8 +33,7 @@ def updates(request, id):
 
 
 
-def delete(self):
-    render
+
 
 
 
