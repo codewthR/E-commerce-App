@@ -42,13 +42,12 @@
                 <tr>
                     <td>{{ i.name}}</td>
                     <td>{{ i.price|apnumber}}</td>
-                    <td><img src="/media/{{ i.image}}" style="width: 100px; height: 100px;"></td> 
-                </td> 
-                <td>
-                    <form method="GET" action="updates.html" style="margin: 0;">
+                    <td><img src="/media/{{ i.image}}" style="width: 100px; height: 100px;"></td>  
+                    <td>
+                        <form method="GET" action="updates.html" style="margin: 0;">
                         <button type="submit" id="navigate-btn">Update</button>
-                    </form>
-                </td>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -7,60 +7,31 @@
     <title>Big_Data_Cart</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
-<body>
-    <div class ="navigation">
-        <nav>
-            <div class = "icon"><b><a href="http://127.0.0.1:8000">
-                Big_Data_Cart
-            </a></b></div>
-            <a href="http://127.0.0.1:8000/display/">
-                Products
-            </a>
-            <a href="http://">
-                Cart
-            </a>
-            <a href="http://">
-                About
-            </a>
-            <div class = "login">
-                <nav>
-                    <a href="http://">
-                        SignIn
-                    </a>
-                    <a href="http://">
-                        SignUp
-                    </a>
-                </nav>
-            </div>
-        </nav>
-    </div>
-    <section class ="hero ">
-        <div class = "hero-content">
-            <h1>80% off on all items </h1>
-            <p>Today greatest winter season sale ends .... Shop early </p>
-            <b><big><a href="http://">Purchase Now</a></big></b>
-        </div>
-    </section>
-    <p class="gradient-text">Hurry Up !</p>
-    <div class = "cont">
-        <h2>ADD STOCK</h2>
-        <form action="/" method="POST" enctype="multipart/form-data">
-            {% csrf_token %} <!-- Missing CSRF token -->
-            <label for="name" class="form-label">Name:</label><br>
-            <input type="text" name="name" required class="form-label" placeholder="Enter Name  "><br><br>
-        
-            <label for="price" class="form-label">Price:</label><br>
-            <input type="number" name="price" step="all" required class="form-label" placeholder="Enter the amount"><br><br>
-        
-            <label for="file" class="form-label">Upload File:</label><br>
-            <input type="file" name="image" class="form-label" ><br><br>
-        
-            <button type="submit" class="btn btn-success">ADD STOCK</button>
-        </form>
-    </div>
+    <body>
+        <div class ="navigation">
+            <nav>
+                <div class = "icon"><b><a href="http://127.0.0.1:8000">Big_Data_Cart</a></b></div>
 
-</form>
-</body>
+                <a href="http://127.0.0.1:8000/display/">Products</a>
+
+                <a href="http://">Cart</a>
+
+                <a href="http://">About</a>
+
+            </nav>
+        </div>
+        
+        <section class ="hero ">
+            <div class = "hero-content">
+                <h1>80% off on all items </h1>
+                <p>Today greatest winter season sale ends .... Shop early </p>
+                <b><big><a href="http://">Purchase Now</a></big></b>
+            </div>
+        </section>
+        <p class="gradient-text">Hurry Up !</p>
+
+
+    </body>
 </html>
 
 
